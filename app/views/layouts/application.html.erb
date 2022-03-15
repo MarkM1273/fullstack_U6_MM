@@ -12,6 +12,17 @@
   </head>
 
   <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to "Mark Murillo CRM Challenge", root_path, class: "navbar-item" %>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <%= link_to "Alphabetized", customers_alphabetized_path, class: "navbar-item" %>
+          <%= link_to "Missing Emails", customers_missing_email_path, class: "navbar-item" %>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

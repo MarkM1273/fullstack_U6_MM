@@ -1,14 +1,17 @@
 <div class="column">
   <div class="card">
-    <div class="card-header">
-      <p class="card-header-title"><%=customer.name%></p>
-    </div>
+    <header class="card-header">
+      <p class="card-header-title mb-0">
+        <%=customer.full_name%>
+      </p>
+    </header>
     <div class="card-image">
       <% if customer.image.present? %>
-        <%= image_tag customer.image.variant(resize_to_limit: [285, 285]).processed  %>
+        <%= image_tag customer.image %>
       <% end %>
     </div>
     <div class="content">
+      <p class="subtitle is-6"><%=customer.email%></p>
       <p class="subtitle is-6"><%=customer.phone_number%></p>
     </div>
   </div>
